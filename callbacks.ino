@@ -121,23 +121,23 @@ void sound(int s){
         }
         if(t3>0){
           if((long)((millis() - t3)) >= 0){
-            digitalWrite(SOUND_GRUNT, HIGH;
+            digitalWrite(SOUND_GRUNT, HIGH);
           }
         }
         if(t4>0){
           if((long)((millis() - t4)) >= 0){
-            digitalWrite(SOUND_CRACK, HIGH;
+            digitalWrite(SOUND_CRACK, HIGH);
           }
         }
         if(t5>0){
           if((long)((millis() - t5)) >= 0){
-            digitalWrite(FIRE_SOL, HIGH;
+            digitalWrite(FIRE_SOL, HIGH);
             }
         }
       break;
     case 1:
       t1 = millis()+10;
-      digitalWrite(SOUND_READY, LOW;
+      digitalWrite(SOUND_READY, LOW);
       break;
     case 2:
       t2 = millis()+10;
@@ -145,11 +145,11 @@ void sound(int s){
       break;
     case 3:
       t3 = millis()+10;
-      digitalWrite(SOUND_GRUNT, LOW;
+      digitalWrite(SOUND_GRUNT, LOW);
       break;
     case 4:
       t4 = millis()+10;
-      digitalWrite(SOUND_CRACK, LOW;
+      digitalWrite(SOUND_CRACK, LOW);
       break;
     case 5:
       t5 = millis()+200;
