@@ -4,8 +4,8 @@ void initializeInputs(){
  ballin.attach(BALL_IN);
  ballin.interval(BOUNCE);
  pinMode(LOADED,INPUT);
- loaded.attach(LOADED);
- loaded.interval(BOUNCE);
+ armReturn.attach(LOADED);
+ armReturn.interval(BOUNCE);
  //pinMode(HAND, INPUT);
  pinMode(DOOR_SENSE, INPUT);
  doorSense.attach(DOOR_SENSE);

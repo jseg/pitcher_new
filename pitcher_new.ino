@@ -33,7 +33,7 @@ elapsedMillis updateUI;
 
 //input debouncing
 Bounce ballin;
-Bounce loaded;
+Bounce armReturn;
 Bounce doorSense;
 
 //Encoders

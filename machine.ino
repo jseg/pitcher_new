@@ -79,7 +79,7 @@ int machine(int s){
         break;
         
         case 6: //detect lift arm return and turn off motor
-            if(loaded.rose()){
+            if(armReturn.rose()){
                 digitalWrite(BALL_LOAD, HIGH); //turn off the lift arm
                 state++;
             }
@@ -110,7 +110,7 @@ int machine(int s){
                 runPreset(currentPreset);
                 //motors();
                 fireOK = true;
-                state = 9;
+                state = 11;
             }
             else{
                 sound(1); //start READY sound
