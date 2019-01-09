@@ -1,6 +1,6 @@
 //Update Hardware Inputs
 void updateInputs(){
-  loaded.update();
+  armReturn.update();
   ballin.update();
   doorSense.update();
 }
