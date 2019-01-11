@@ -101,6 +101,7 @@ int machine(int s){
                     Serial.print(F("Ball not detected! (No error handling available)"));
                     state++;
                 }
+            digitalWrite(LASER, LOW);
             }
             break;
         
