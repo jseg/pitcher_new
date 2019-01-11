@@ -111,6 +111,7 @@ int machine(int s){
                 runPreset(currentPreset);
                 //motors();
                 fireOK = true;
+                keyed = false;
                 state = 11;
             }
             else{
@@ -147,6 +148,9 @@ int machine(int s){
                 stateTimeout = 0;
                 state++;
                 syncUI();
+             }
+             if (keyed){
+                 state = 10;
              }
         break;
         //FIRING SEQUENCE
