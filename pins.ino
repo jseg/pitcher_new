@@ -7,7 +7,7 @@ void initializeInputs(){
  armReturn.attach(LOADED);
  armReturn.interval(BOUNCE);
  //pinMode(HAND, INPUT);
- pinMode(DOOR_SENSE, INPUT);
+ pinMode(DOOR_SENSE, INPUT_PULLUP);
  doorSense.attach(DOOR_SENSE);
  doorSense.interval(BOUNCE);
  pinMode(PHOTOSENSE, INPUT);

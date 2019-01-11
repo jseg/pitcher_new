@@ -158,7 +158,7 @@ int machine(int s){
         break;
 
         case 14:    //wait for door to open
-            if(doorSense.rose()){
+            if(doorSense.fell()){
                 state++;
             }
         break;

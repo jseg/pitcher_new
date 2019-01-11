@@ -3,6 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
+                "/Users/john/Library/Arduino15/packages/esp8266/tools/**",
+                "/Users/john/Library/Arduino15/packages/esp8266/hardware/esp8266/2.4.2/**",
                 "${workspaceFolder}/**",
                 "/Users/john/Documents/Arduino/libraries",
                 "/Applications/Arduino.app/Contents/Java/hardware"
@@ -15,7 +17,8 @@
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "forcedInclude": []
         }
     ],
     "version": 4
