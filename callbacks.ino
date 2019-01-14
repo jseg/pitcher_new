@@ -136,19 +136,19 @@ void sound(int s){
         }
       break;
     case 1:
-      t1 = millis()+50;
+      t1 = millis()+SIGNALTIME;
       digitalWrite(SOUND_READY, LOW);
       break;
     case 2:
-      t2 = millis()+50;
+      t2 = millis()+SIGNALTIME;
       digitalWrite(SOUND_EXPLODE, LOW);
       break;
     case 3:
-      t3 = millis()+50;
+      t3 = millis()+SIGNALTIME;
       digitalWrite(SOUND_GRUNT, LOW);
       break;
     case 4:
-      t4 = millis()+50;
+      t4 = millis()+SIGNALTIME;
       digitalWrite(SOUND_CRACK, LOW);
       break;
     case 5:
