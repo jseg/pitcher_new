@@ -143,7 +143,7 @@ int machine(int s){
 
         case 12:    //wait for fire command
              if(fireOK){
-                sound(4); //load to explode
+                sound(2); //load to explode
                 fireOK = false;
                 stateTimeout = 0;
                 state++;
