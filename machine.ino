@@ -98,8 +98,10 @@ int machine(int s){
                     state++;
                 }
                 else{
-                    Serial.print(F("Ball not detected! (No error handling available)"));
-                    state++;
+                    Serial.print(F("Ball not detected! Error Code 1"));
+                    //state++;
+                    errorCode = 1;
+                    syncUI();
                 }
             digitalWrite(LASER, LOW);
             }

@@ -85,6 +85,8 @@ void cmd_callback( int idx, int v, int up ) {
       Serial.print(throwSpeed);
       Serial.print(F(" "));
       Serial.print(totalPosErr());
+      Serial.print(F(" "));
+      Serial.print(errorCode);
       Serial.println(F(" "));
       return;
     case CMD_SERIAL:
@@ -96,7 +98,15 @@ void cmd_callback( int idx, int v, int up ) {
     case CMD_SAVE:
       // printEncoders.start();
       return;
+    case CMD_HANDLE_ERROR:
+       switch(arg1){
+         case 1:
+            state++;
+            errorCode = 0;   
+       }
+      return;
   }
+  
 }
 
 void syncUI(){
