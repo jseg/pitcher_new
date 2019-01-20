@@ -101,7 +101,7 @@ void cmd_callback( int idx, int v, int up ) {
     case CMD_HANDLE_ERROR:
        switch(arg1){
          case 1:
-            state++;
+            state = 0;
             errorCode = 0;   
        }
       return;
