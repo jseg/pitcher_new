@@ -126,6 +126,8 @@ void syncUI(){
   Serial3.print(throwSpeed);
   Serial3.print(F(" "));
   Serial3.print(totalPosErr());
+  Serial3.print(F(" "));
+  Serial3.print(errorCode);
   Serial3.println(F(" "));
 }
 
