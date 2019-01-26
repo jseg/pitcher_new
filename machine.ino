@@ -109,7 +109,9 @@ int machine(int s){
         
         case 9:     //either start moving to the previous preset or play ready sound
             if (rethrow){
-                currentPreset = lastPreset;
+                if(lastPreset>0){
+                    currentPreset = lastPreset;
+                }
                 runPreset(currentPreset);
                 //motors();
                 fireOK = true;
