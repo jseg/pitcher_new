@@ -132,7 +132,7 @@ int machine(int s){
                 currentPreset = keyedPreset;
                 runPreset(currentPreset);
                 keyed = false;
-                keyedPreset = 0;
+                //keyedPreset = 0;
                 state++;
                 //syncUI();
             }
