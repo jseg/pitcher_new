@@ -11,7 +11,7 @@
 //GLOBAL STATES
 int state;
 bool keyed = false;   //flag to track wether a preset has been keyed in
-int keyedPreset = 0;
+int keyedPreset = 5;
 int currentPreset = 5;
 int lastPreset = 5;
 int batterHand = 1; //0 = left 1 = right
