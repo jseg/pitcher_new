@@ -141,6 +141,33 @@ void syncUI(){
   Serial3.println(F(" "));
   Serial3.print(presets[currentPreset][2]);
   Serial3.println(F(" "));
+  Serial.print(F("sync "));
+  Serial.print(state);
+  Serial.print(F(" "));
+  Serial.print(batterHand);
+  Serial.print(F(" "));
+  Serial.print(keyed);
+  Serial.print(F(" "));
+  Serial.print(rethrow);
+  Serial.print(F(" "));
+  Serial.print(keyedPreset);
+  Serial.print(F(" "));
+  Serial.print(currentPreset);
+  Serial3.print(F(" "));
+  Serial.print(throwSpeed);
+  Serial.print(F(" "));
+  Serial.print(totalPosErr());
+  Serial.print(F(" "));
+  Serial.print(errorCode);
+  Serial.println(F(" "));
+  Serial.print(isNudge);
+  Serial.println(F(" "));
+  Serial.print(presets[currentPreset][0]);
+  Serial.println(F(" "));
+  Serial.print(presets[currentPreset][1]);
+  Serial.println(F(" "));
+  Serial.print(presets[currentPreset][2]);
+  Serial.println(F(" "));
 }
 
 void help(){
