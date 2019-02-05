@@ -40,7 +40,7 @@ void loadFactoryPresets(){
 }
 
 //Load Presets from EEProm
-void loadEEPromPresets(int idx, int v, int up){
+void loadEEPromPresets(){
   Serial.println(F("Load Presets from EEProm"));
   int b = 0; //right
   for(int i = 0; i< NUM_PRESETS; i++){
