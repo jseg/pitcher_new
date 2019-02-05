@@ -101,7 +101,7 @@ int machine(int s){
                     Serial.print(F("Ball not detected! Error Code 1"));
                     //state++;
                     errorCode = 1;
-                    repeatThrow = 0;
+                    rethrow = false;
                     syncUI();
                 }
             digitalWrite(LASER, LOW);

@@ -16,7 +16,6 @@ int currentPreset = 5;
 int lastPreset = 5;
 int batterHand = 1; //0 = left 1 = right
 bool rethrow = false;
-int repeatThrow = 0;
 bool atSetPoint = false;
 int throwSpeed = 80;
 int flightTime = 459; //magic number to make the ball cross the plane of home plate at the right moment. Move to settings?
