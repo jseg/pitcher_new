@@ -22,6 +22,7 @@ int throwSpeed = 80;
 int flightTime = 459; //magic number to make the ball cross the plane of home plate at the right moment. Move to settings?
 bool fireOK = false;
 int errorCode = 0;
+int isNudge = 0;
 
 
 //timers
@@ -62,9 +63,9 @@ Atm_command cmd;  //This object is the primary way to control the machine during
 char cmd_buffer[80];   // input buffer
 Atm_command cmd1;  //This object is the primary way to control the machine during operation     
 char cmd1_buffer[80];   // input buffer
-enum {CMD_LOAD, CMD_PRESET, CMD_FIRE, CMD_HAND, CMD_EEPROMSETUP, CMD_PITCH, CMD_YAW, CMD_SPRING, CMD_HOME, CMD_MOVE, CMD_STATE, CMD_SERIAL, CMD_NUDGE, CMD_SAVE, CMD_HANDLE_ERROR };
+enum {CMD_LOAD, CMD_PRESET, CMD_FIRE, CMD_HAND, CMD_EEPROMSETUP, CMD_PITCH, CMD_YAW, CMD_SPRING, CMD_HOME, CMD_MOVE, CMD_STATE, CMD_SERIAL, CMD_NUDGE, CMD_SAVE, CMD_HANDLE_ERROR, CMD_FACTORY };
 const char cmdlist[] = //must be in the same order as enum
-      "load preset fire hand eepromsetup pitch yaw spring home move state serial nudge save, handleError"; 
+      "load preset fire hand eepromsetup pitch yaw spring home move state serial nudge save handleError factory"; 
       
 
 /////////////////////////////////

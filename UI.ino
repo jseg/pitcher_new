@@ -96,14 +96,18 @@ void cmd_callback( int idx, int v, int up ) {
       nudge(arg1, arg2, arg3);
       return;
     case CMD_SAVE:
-      // printEncoders.start();
+      savePreset();
       return;
     case CMD_HANDLE_ERROR:
        switch(arg1){
          case 1:
             state = 0;
-            errorCode = 0;   
+            errorCode = 0;
+            break;  
        }
+       return;
+    case CMD_FACTORY:
+      loadDefaultPresets();
       return;
   }
   
@@ -128,6 +132,14 @@ void syncUI(){
   Serial3.print(totalPosErr());
   Serial3.print(F(" "));
   Serial3.print(errorCode);
+  Serial3.println(F(" "));
+  Serial3.print(isNudge);
+  Serial3.println(F(" "));
+  Serial3.print(presets[currentPreset][0]);
+  Serial3.println(F(" "));
+  Serial3.print(presets[currentPreset][1]);
+  Serial3.println(F(" "));
+  Serial3.print(presets[currentPreset][2]);
   Serial3.println(F(" "));
 }
 
