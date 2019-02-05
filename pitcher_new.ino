@@ -99,6 +99,8 @@ void setup() {
   doorServo.begin(4)
            .step(180,0);
 
+  loadEEPromPresets();
+
 }
 
 void loop(){

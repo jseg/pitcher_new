@@ -114,6 +114,13 @@ void cmd_callback( int idx, int v, int up ) {
 }
 
 void syncUI(){
+  int handedPreset = 0;
+  if (batterHand){
+    handedPreset = currentPreset;
+  }
+  else{
+    handedPreset = currentPreset+9;
+  }
   Serial3.print(F("sync "));
   Serial3.print(state);
   Serial3.print(F(" "));
@@ -135,11 +142,11 @@ void syncUI(){
   Serial3.print(F(" "));
   Serial3.print(isNudge);
   Serial3.print(F(" "));
-  Serial3.print(presets[currentPreset][0]);
+  Serial3.print(presets[handedPreset][0]);
   Serial3.print(F(" "));
-  Serial3.print(presets[currentPreset][1]);
+  Serial3.print(presets[handedPreset][1]);
   Serial3.print(F(" "));
-  Serial3.print(presets[currentPreset][2]);
+  Serial3.print(presets[handedPreset][2]);
   Serial3.println(F(" "));
   Serial.print(F("sync "));
   Serial.print(state);

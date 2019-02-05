@@ -53,9 +53,16 @@ void loadEEPromPresets(int idx, int v, int up){
     }
     Serial.println(F(" "));
   }
-  pitchSet = map(presets[currentPreset][0],0,100,PITCHMIN,PITCHMAX);  //Update motor setpoints
-  yawSet = map(presets[currentPreset][1],0,100,YAWMIN,YAWMAX);
-  springSet =map(presets[currentPreset][2],0,100,SPRINGMIN,SPRINGMAX);
+  int handedPreset = 0;
+  if (batterHand){
+    handedPreset = currentPreset;
+  }
+  else{
+    handedPreset = currentPreset+9;
+  }
+ pitchSet = map(constrain(presets[handedPreset][0],0,100),0,100,PITCHMIN,PITCHMAX);
+  yawSet = map(constrain(presets[handedPreset][1],0,100),0,100,YAWMIN,YAWMAX);
+  springSet = map(constrain(presets[handedPreset][2],0,100),0,100,SPRINGMIN,SPRINGMAX);
 }
 
 //Save Presets to EEPROM
@@ -84,12 +91,19 @@ void feedback(){
 
 //Nudge preset positions (saved to EEPROM)
 void nudge(int p, int y, int s){
-  presets[currentPreset][0] = constrain(presets[currentPreset][0]+p,0,100);
-  presets[currentPreset][1] = constrain(presets[currentPreset][1]+y,0,100);
-  presets[currentPreset][2] = constrain(presets[currentPreset][2]+s,0,100);
-  pitchSet = map(constrain(presets[currentPreset][0],0,100),0,100,PITCHMIN,PITCHMAX);
-  yawSet = map(constrain(presets[currentPreset][1],0,100),0,100,YAWMIN,YAWMAX);
-  springSet = map(constrain(presets[currentPreset][2],0,100),0,100,SPRINGMIN,SPRINGMAX);
+  int handedPreset = 0;
+  if (batterHand){
+    handedPreset = currentPreset;
+  }
+  else{
+    handedPreset = currentPreset+9;
+  }
+  presets[handedPreset][0] = constrain(presets[handedPreset][0]+p,0,100);
+  presets[handedPreset][1] = constrain(presets[handedPreset][1]+y,0,100);
+  presets[handedPreset][2] = constrain(presets[handedPreset][2]+s,0,100);
+  pitchSet = map(constrain(presets[handedPreset][0],0,100),0,100,PITCHMIN,PITCHMAX);
+  yawSet = map(constrain(presets[handedPreset][1],0,100),0,100,YAWMIN,YAWMAX);
+  springSet = map(constrain(presets[handedPreset][2],0,100),0,100,SPRINGMIN,SPRINGMAX);
   syncUI(); 
 }
 
