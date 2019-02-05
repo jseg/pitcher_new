@@ -11,6 +11,9 @@ void initializeInputs(){
  doorSense.attach(DOOR_SENSE);
  doorSense.interval(BOUNCE);
  pinMode(PHOTOSENSE, INPUT);
+ pinMode(ADJUST,INPUT_PULLUP);
+ adjust.attach(ADJUST);
+ adjust.interval(BOUNCE);
 
 }
 

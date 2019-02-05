@@ -3,6 +3,13 @@ void updateInputs(){
   armReturn.update();
   ballin.update();
   doorSense.update();
+  adjust.update();
+  if(!adjust.read()){
+    isNudge = 1;
+  }
+  else{
+    isNudge = 0;
+  }
 }
 
 //Load Factory Defaults to Memory

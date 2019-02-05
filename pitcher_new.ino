@@ -37,6 +37,7 @@ elapsedMillis updateUI;
 Bounce ballin;
 Bounce armReturn;
 Bounce doorSense;
+Bounce adjust;
 
 //Encoders
 //Documentation: https://www.pjrc.com/teensy/td_libs_Encoder.html
