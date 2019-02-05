@@ -129,7 +129,6 @@ int machine(int s){
         //AIMING SEQUENCE
         case 10:     //wait for user input to assign preset
             if(keyed){
-                lastPreset = currentPreset;
                 currentPreset = keyedPreset;
                 runPreset(currentPreset);
                 keyed = false;
@@ -152,6 +151,7 @@ int machine(int s){
                 fireOK = false;
                 stateTimeout = 0;
                 state++;
+                lastPreset = currentPreset;
                 syncUI();
              }
              if (keyed){
