@@ -26,9 +26,12 @@ int machine(int s){
                 springEn = true;                                  
                 stateTimeout = 0;    
                 state++;
-                if(isLoaded){                                   //if the machine was turned off with a ball loaded
-                  state = 9;                                    //skip to aiming                       
+                digitalWrite(LASER, HIGH); //check if a ball is in the pocket from last power on
+                delay(100);
+                if(!digitalRead(PHOTOSENSE)){
+                  state = 9;  //ball is in the pocket, skip loading
                 }
+                digitalWrite(LASER, LOW);
             }
         break;
         
