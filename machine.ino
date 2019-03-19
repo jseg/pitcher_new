@@ -25,7 +25,10 @@ int machine(int s){
                 springSet = 0;                                    //this line might be vestigial
                 springEn = true;                                  
                 stateTimeout = 0;    
-                state++;                               
+                state++;
+                if(isLoaded){                                   //if the machine was turned off with a ball loaded
+                  state = 9;                                    //skip to aiming                       
+                }
             }
         break;
         

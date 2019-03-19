@@ -22,6 +22,7 @@ int flightTime = 459; //magic number to make the ball cross the plane of home pl
 bool fireOK = false;
 int errorCode = 0;
 int isNudge = 0;
+bool isLoaded = false;
 
 
 //timers
@@ -100,6 +101,12 @@ void setup() {
 
   loadEEPromPresets();
 
+  digitalWrite(LASER, HIGH); //check if a ball is in the pocket from last power on
+  delay(100);
+  if(!digitalRead(PHOTOSENSE)){
+    isLoaded = true;  //ball is in the pocket, skip loading
+  }
+  digitalWrite(LASER, LOW);
 }
 
 void loop(){
