@@ -26,12 +26,7 @@ int machine(int s){
                 springEn = true;                                  
                 stateTimeout = 0;    
                 state++;
-                digitalWrite(LASER, HIGH); //check if a ball is in the pocket from last power on
-                delay(100);
-                if(!digitalRead(PHOTOSENSE)){
-                  state = 9;  //ball is in the pocket, skip loading
-                }
-                digitalWrite(LASER, LOW);
+           
             }
         break;
         
@@ -39,7 +34,7 @@ int machine(int s){
             springEn = false;
             spring(4096);           //move carriage into position
             yawSet = 35;            //helps prevent the ball from bouncing out
-            digitalWrite(LATCH, HIGH);
+            //digitalWrite(LATCH, HIGH);
             stateTimeout = 0;
             state++;
         break;
@@ -57,6 +52,15 @@ int machine(int s){
                         EncSpring.write(3000);
                         springSet = 300;
                         springEn = false;
+                        digitalWrite(LASER, HIGH); //check if a ball is in the pocket from last power on
+                        delay(10);
+                        if(!digitalRead(PHOTOSENSE)){
+                            state = 9;  //ball is in the pocket, skip loading
+                         }
+                         else{
+                           digitalWrite(LATCH, HIGH);
+                         }
+                         digitalWrite(LASER, LOW);                      
                     }
                 }
                 if (ballin.fell()){
