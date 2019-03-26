@@ -53,9 +53,9 @@ int machine(int s){
                         springSet = 300;
                         springEn = false;
                         digitalWrite(LASER, HIGH); //check if a ball is in the pocket from last power on
-                        delay(100);
+                        delay(50);
                         if(!digitalRead(PHOTOSENSE)){
-                            state = 8;  //ball is in the pocket, skip loading
+                            state = 7;  //ball is in the pocket, skip loading
                             loaded = false;
                             cocked = false;
                             stateTimeout = 0;
