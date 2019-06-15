@@ -152,7 +152,7 @@ int machine(int s){
         break;
         
         case 11: //wait for machine to arrive at preset
-            if(totalPosErr() < 3){
+            if(totalPosErr() < 6){
                 state++;
                 syncUI(); //showing case 12 on IPAD
             }
