@@ -23,13 +23,13 @@ int scale(int setPt, int EncPos, int minSpeed){
       return(4096);
     }
     if ((error <= 20) && (error > 2)){
-      return map(error,1,80,minSpeed,4096);
+      return map(error,1,20,minSpeed,4096);
     }
     if (error < -20){
       return(-4096);
     }
     if ((error >= -20) && (error < -2)){
-      return map(error,-80,-1,-4096,(-1 * minSpeed));
+      return map(error,-20,-1,-4096,(-1 * minSpeed));
     }
     else return 0;
 }

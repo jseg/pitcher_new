@@ -152,10 +152,13 @@ int machine(int s){
         break;
         
         case 11: //wait for machine to arrive at preset
-            if(totalPosErr() < 6){
+            if(totalPosErr() < 3){
                 state++;
                 syncUI(); //showing case 12 on IPAD
             }
+            if (keyed){
+                 state = 10;
+             }
         break;
 
         case 12:    //wait for fire command
