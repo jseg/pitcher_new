@@ -175,11 +175,11 @@ void syncUI(){
   Serial.print(F(" "));
   Serial.print(presets[currentPreset][2]);
   Serial.print(F(" "));
-  Serial.print(EncPitch.read());
+  Serial.print(map(EncPitch.read(),PITCHMIN,PITCHMAX,0,100));
   Serial.print(F(" "));
-  Serial.print(EncYaw.read());
+  Serial.print(map(EncYaw.read(),YAWMIN,YAWMAX,0,100));
   Serial.print(F(" "));
-  Serial.print(EncSpring.read()/10);
+  Serial.print(map(EncSpring.read()/10,SPRINGMIN,SPRINGMAX,0,100));
   Serial.println(F(" "));
 }
 
