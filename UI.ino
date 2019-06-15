@@ -174,6 +174,12 @@ void syncUI(){
   Serial.print(presets[currentPreset][1]);
   Serial.print(F(" "));
   Serial.print(presets[currentPreset][2]);
+  Serial.print(F(" "));
+  Serial.print(EncPitch.read());
+  Serial.print(F(" "));
+  Serial.print(EncYaw.read());
+  Serial.print(F(" "));
+  Serial.print(EncSpring.read()/10);
   Serial.println(F(" "));
 }
 
