@@ -105,19 +105,21 @@ int machine(int s){
         break;
 
         case 8:
-            if (stateTimeout > 50){
-                if(!digitalRead(PHOTOSENSE)){
-                    Serial.println(F("The ball is in the pocket!"));
-                    state++;
-                }
-                else{
-                    Serial.print(F("Ball not detected! Error Code 1"));
-                    //state++;
-                    errorCode = 1;
-                    rethrow = false;
-                    syncUI();
-                }
-            digitalWrite(LASER, LOW);
+            if(errorCode == 0){
+              if (stateTimeout > 50){
+                  if(!digitalRead(PHOTOSENSE)){
+                      Serial.println(F("The ball is in the pocket!"));
+                      state++;
+                  }
+                  else{
+                      Serial.print(F("Ball not detected! Error Code 1"));
+                      //state++;
+                      errorCode = 1;
+                      rethrow = false;
+                      syncUI();
+                  }
+              digitalWrite(LASER, LOW);
+              }
             }
             break;
         
