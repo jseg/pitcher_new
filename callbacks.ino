@@ -83,10 +83,10 @@ void savePreset(){ // 1 right 0 left
 
 //Send Feedback to ESP
 void feedback(){
-  if(updateUI>2000){
-    syncUI();
-    updateUI -= 2000;
-  }
+    if(updateUI>200){
+      syncUI();
+      updateUI -= 200;
+    }
 }
 
 //Nudge preset positions (saved to EEPROM)
