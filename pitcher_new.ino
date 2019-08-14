@@ -84,7 +84,7 @@ void setup() {
 
   //Serial UI set-up
   Serial.begin(115200); 
-  Serial3.begin(115200);
+  Serial3.begin(4800);
   help();
   cmd.begin( Serial3, cmd_buffer, sizeof( cmd_buffer ) ) //start the serial ui
       .list( cmdlist)                                   //assign command list from above
