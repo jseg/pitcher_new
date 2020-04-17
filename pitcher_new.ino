@@ -86,11 +86,11 @@ void setup() {
   Serial.begin(115200); 
   Serial3.begin(4800);
   help();
-  cmd.begin( Serial3, cmd_buffer, sizeof( cmd_buffer ) ) //start the serial ui
+  cmd.begin( Serial, cmd_buffer, sizeof( cmd_buffer ) ) //start the serial ui
       .list( cmdlist)                                   //assign command list from above
       .onCommand( cmd_callback );                       //assign callback, located in UI.ino
 
-  cmd1.begin( Serial, cmd1_buffer, sizeof( cmd1_buffer ) ) //start the serial ui
+  cmd1.begin( Serial3, cmd1_buffer, sizeof( cmd1_buffer ) ) //start the serial ui
       .list( cmdlist)                                   //assign command list from above
       .onCommand( cmd_callback );                       //assign callback, located in UI.ino
 
