@@ -66,7 +66,7 @@ void runPreset(int num){
     springEn = true;
   }
   //currentPreset = num;
-  num = (num - (batterHand*9))+9;
+  num = num + (batterHand*9);
   pitchSet = map(constrain(presets[num][0],0,100),0,100,PITCHMIN,PITCHMAX);
   yawSet = map(constrain(presets[num][1],0,100),0,100,YAWMIN,YAWMAX);
   springSet = map(constrain(presets[num][2],0,100),0,100,SPRINGMIN,SPRINGMAX);
