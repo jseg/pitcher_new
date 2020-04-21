@@ -169,11 +169,11 @@ void syncUI(){
   Serial.print(F(" "));
   Serial.print(isNudge);
   Serial.print(F(" "));
-  Serial.print(presets[currentPreset][0]);
+  Serial.print(presets[handedPreset][0]);
   Serial.print(F(" "));
-  Serial.print(presets[currentPreset][1]);
+  Serial.print(presets[handedPreset][1]);
   Serial.print(F(" "));
-  Serial.print(presets[currentPreset][2]);
+  Serial.print(presets[handedPreset][2]);
   Serial.print(F(" "));
   Serial.print(map(EncPitch.read(),PITCHMIN,PITCHMAX,0,100));
   Serial.print(F(" "));
