@@ -99,7 +99,7 @@ void nudge(int p, int y, int s){
     handedPreset = currentPreset+9;
   }
   presets[handedPreset][0] = constrain(presets[handedPreset][0]+p,0,100);
-  presets[handedPreset][1] = constrain(presets[handedPreset][1]+y,0,100);
+  presets[handedPreset][1] = constrain(presets[handedPreset][1]-y,0,100);
   presets[handedPreset][2] = constrain(presets[handedPreset][2]+s,0,100);
   pitchSet = map(constrain(presets[handedPreset][0],0,100),0,100,PITCHMIN,PITCHMAX);
   yawSet = map(constrain(presets[handedPreset][1],0,100),0,100,YAWMIN,YAWMAX);
