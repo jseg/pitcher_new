@@ -107,7 +107,7 @@ void cmd_callback( int idx, int v, int up ) {
        }
        return;
     case CMD_FACTORY:
-      loadDefaultPresets();
+      //loadDefaultPresets();
       return;
   }
   
